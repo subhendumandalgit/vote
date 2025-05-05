@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="admin_login.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Admin Login</h2>
+        <form action="admin_login.php" method="POST" autocomplete="off">
+            <label for="admin_username">Username:</label>
+            <input type="text" name="admin_username" id="admin_username" required autocomplete="new-password"><br>
+
+            <label for="admin_password">Password:</label>
+            <input type="password" name="admin_password" id="admin_password" required autocomplete="new-password"><br>
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>

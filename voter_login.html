@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Login</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add your CSS for styling -->
+</head>
+<body>
+    <div class="login-container">
+        <h2>Voter Login</h2>
+        
+        <!-- Login Form -->
+        <form action="login.php" method="POST">
+            <div>
+                <label for="voter_id">Voter ID:</label>
+                <input type="text" name="voter_id" id="voter_id" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div>
+                <button type="submit">Login</button>
+            </div>
+        </form>
+
+        <!-- Display error message if login fails -->
+        <?php if (isset($_SESSION['error_message'])): ?>
+            <div class="error-message"><?php echo $_SESSION['error_message']; ?></div>
+            <?php unset($_SESSION['error_message']); ?>
+        <?php endif; ?>
+    </div>
+</body>
+</html>
