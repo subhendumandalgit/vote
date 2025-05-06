@@ -391,8 +391,8 @@ footer p {
 <a href="voter_dashboard.php">Back</a>
    <!-- footer -->
    <footer>
-        <p>&copy; 2024 Online Voting System. All rights reserved.</p>
-        <p>Developed for [Minor Project 5th sem]</p>
+        <p>&copy;Online Voting System. All rights reserved.</p>
+        <p>Developed for [Major Project 6th sem]</p>
     </footer>
 
 </body>
