@@ -449,7 +449,7 @@ footer p {
     </script>
    <!-- footer -->
    <footer>
-        <p>&copy;Online Voting System. All rights reserved.</p>
+        <p>&copy; Online Voting System. All rights reserved.</p>
         <p>Developed for [Major Project 6th sem]</p>
     </footer>
 
