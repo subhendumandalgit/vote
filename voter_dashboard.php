@@ -50,110 +50,159 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Global Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* Body */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: rgb(179, 232, 215);  /* Soft background color */
-            display: flex;
-            justify-content: center;
-            align-items: center; /* Center everything vertically */
-            min-height: 100vh;
-            color: #333;
-            padding: 20px;
-            flex-direction: column; /* Stack elements vertically */
-            gap: 20px; /* Space between elements */
-        }
+/* Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8f6f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #2c3e50;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+}
 
-        /* Main Container */
-        .container {
-            background: linear-gradient(to right, #4facfe, #00f2fe); /* Light Blue to Aqua Gradient */
-            width: 550px;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 2px solid #eee;
-        }
+/* Container */
+.container {
+    background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Gradient Blue-Lavender */
+    width: 100%;
+    max-width: 960px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+}
 
-        /* Hover effect for container */
-        .container:hover {
-            transform: scale(1.05); /* Slight increase on hover */
-            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
-        }
+.container:hover {
+    transform: scale(1.015);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+}
 
-        /* Header */
-        h2 {
-            font-size: 36px;
-            color: #34495e; /* Darker color for the name */
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
+/* Headings */
+h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
 
-        h3 {
-            font-size: 20px;
-            color: #7f8c8d;
-            margin-bottom: 20px;
-        }
+h3 {
+    font-size: 1.25rem;
+    color: #34495e;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
 
-        /* Button Styling */
-        button, .logout-btn {
-            background-color: #3498db;  /* Blue background */
-            color: white;
-            padding: 16px;
-            border: none;
-            border-radius: 5px;
-            width: 100%;
-            font-size: 20px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-top: 25px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-        }
+/* Buttons */
+button, .logout-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    width: 45%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-        button:hover, .logout-btn:hover {
-            background-color: #2980b9;  /* Darker blue on hover */
-        }
+button:hover, .logout-btn:hover {
+    background-color: #2c80b4;
+    transform: translateY(-2px);
+}
 
-        /* Logout Button */
-        .logout-btn {
-            background-color: #e74c3c;
-            margin-top: 40px; /* Add space between container and logout button */
-        }
+/* Logout Button */
+.logout-btn {
+    width: 100%;
+    background-color: #e74c3c;
+    margin-top: 40px;
+}
 
-        .logout-btn:hover {
-            background-color: #c0392b;  /* Darker red on hover */
-        }
+.logout-btn:hover {
+    background-color: #c0392b;
+}
 
-        /* Media Queries for Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                width: 90%;
-                padding: 20px;
-            }
+/* Links */
+a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #1e3799;
+    display: inline-block;
+    margin-top: 10px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
 
-            h2 {
-                font-size: 28px;
-            }
+a:hover {
+    color: #e74c3c;
+    transform: scale(1.05);
+}
 
-            h3 {
-                font-size: 18px;
-            }
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
 
-            button, .logout-btn {
-                font-size: 16px;
-            }
+    h2 {
+        font-size: 2rem;
+    }
 
-            input[type="text"] {
-                font-size: 14px;
-            }
-        }
+    h3 {
+        font-size: 1rem;
+    }
+
+    button, .logout-btn {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    a {
+        font-size: 1rem;
+    }
+}
+/* Unified Subheading Style */
+.section-title {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Hyperlink styled as button */
+a.link-button {
+    display: inline-block;
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+a.link-button:hover {
+    background-color: #219150;
+    transform: translateY(-2px);
+    color: #fff;
+}
+
+
     </style>
     <!-- Include SweetAlert2 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.5/dist/sweetalert2.min.css" rel="stylesheet">
@@ -162,14 +211,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <div class="container">
     <h2>Welcome, <?php echo htmlspecialchars($voter['voter_name']); ?></h2>
+    <br>
+    <h3 class="section-title">Update Your Details Here</h3>
+<button id="updateDetailsBtn">Update Details</button>
+<br><br><br>
+<h3 class="section-title">Cast Your Vote Here</h3>
+<a href="vote.php" class="link-button">Click Here For Voting</a>
+<a href="create_event.php" class="link-button">Create Your Own Room</a>
 
-    <!-- Button to trigger SweetAlert for updating details -->
-    <h3>Update Your Details</h3>
-    <button id="updateDetailsBtn">Update Details</button>
-
-    <h3>Cast Your Vote</h3>
-    <a href="vote.php">Global Vote</a><br>
-    <a href="create_event.php">Local Vote</a>
 </div>
 
 <!-- Logout Button -->
