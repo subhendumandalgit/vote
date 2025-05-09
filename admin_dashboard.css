@@ -321,7 +321,11 @@ button[type="submit"]:disabled {
 }
 
 #generateBtn{
-    color: #47c043;
+    background-color: #6fdba7;
+    color: #3a38a4;
+}
+.report{
+    margin-left: 1000px;
 }
 
 /* Footer */
