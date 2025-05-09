@@ -387,11 +387,12 @@ footer p {
     });
 </script>
 </div>
-
-<a href="voter_dashboard.php">Back</a>
+<br>
+    <a href="voter_dashboard.php" class="back-btn">← Back to Home</a>
+</div>
    <!-- footer -->
    <footer>
-        <p>&copy;Online Voting System. All rights reserved.</p>
+        <p>&copy; Online Voting System. All rights reserved.</p>
         <p>Developed for [Major Project 6th sem]</p>
     </footer>
 
