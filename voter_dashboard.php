@@ -215,7 +215,7 @@ a.link-button:hover {
     <h3 class="section-title">Update Your Details Here</h3>
 <button id="updateDetailsBtn">Update Details</button>
 <br><br><br>
-<h3 class="section-title">Cast Your Vote Here</h3>
+<h3 class="section-title">Choose one for Voting</h3>
 <a href="vote.php" class="link-button">Click Here For Voting</a>
 <a href="create_event.php" class="link-button">Create Your Own Room</a>
 
